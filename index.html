@@ -4,137 +4,240 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pavithra | My Portfolio</title>
+<title>Pavithra | Professional Portfolio</title>
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background: #f5f5fa;
-    color: #333;
+    background: #f7f7fc;
+    color: #29263a;
+    line-height: 1.6;
 }
 
 /* Navigation */
 nav {
-    background: #252044;
-    padding: 20px;
-    text-align: center;
+    background: #201a39;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 15px;
     font-weight: bold;
 }
 
-/* Home */
-header {
-    background: linear-gradient(120deg, #6844c4, #a36bda);
+nav a:hover {
+    color: #c6a5ff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(120deg, #34245f, #8258c9);
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 65px 20px;
 }
 
-header img {
-    width: 160px;
-    height: 160px;
+.profile-photo {
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    border: 5px solid white;
     object-fit: cover;
+    object-position: center;
+    border: 5px solid white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
-header h1 {
-    margin: 15px;
+.hero h1 {
+    font-size: 38px;
+    margin-top: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: white;
+    color: #6844b5;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
 /* Common Sections */
 section {
-    padding: 45px 20px;
+    padding: 55px 20px;
     text-align: center;
 }
 
-h2 {
-    color: #6844c4;
-    margin-bottom: 25px;
+.section-title {
+    font-size: 30px;
+    color: #6844b5;
+    margin-bottom: 30px;
 }
 
 /* About */
-.about {
-    max-width: 750px;
+.about-box {
+    max-width: 800px;
     margin: auto;
-    line-height: 1.8;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #ddd;
+    text-align: left;
+}
+
+/* Education */
+.education-card {
+    max-width: 700px;
+    background: white;
+    margin: auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #ddd;
 }
 
 /* Skills */
+.skills {
+    max-width: 850px;
+    margin: auto;
+}
+
 .skills span {
     display: inline-block;
-    background: #6844c4;
+    padding: 11px 22px;
+    background: #6844b5;
     color: white;
-    padding: 10px 18px;
-    margin: 7px;
-    border-radius: 20px;
+    border-radius: 25px;
+    margin: 8px;
 }
 
-/* Projects */
-.project-card {
-    background: white;
-    padding: 20px;
-    margin: 15px auto;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #ccc;
-}
-
-/* Certificates */
-.certificates {
+/* Projects and Internships */
+.card-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.certificate-card {
-    background: white;
+.card {
     width: 280px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #ddd;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Certificates */
+.certificate-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.certificate-card {
+    width: 300px;
+    background: white;
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #ccc;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #ddd;
 }
 
 .certificate-card img {
     width: 100%;
-    height: 190px;
+    height: 200px;
     object-fit: contain;
+    background: #f3f1f8;
+    border-radius: 8px;
 }
 
 .certificate-card h3 {
+    color: #6844b5;
+    margin: 12px 0;
+}
+
+.certificate-card a {
+    display: inline-block;
+    background: #6844b5;
+    color: white;
+    padding: 9px 18px;
+    text-decoration: none;
+    border-radius: 6px;
     margin-top: 10px;
-    color: #6844c4;
+}
+
+/* Achievements */
+.achievement-box {
+    max-width: 750px;
+    background: white;
+    padding: 25px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #ddd;
+    text-align: left;
 }
 
 /* Contact */
-.contact p {
-    margin: 12px;
+.contact-box {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #ddd;
+}
+
+.contact-box a {
+    color: #6844b5;
+    text-decoration: none;
 }
 
 /* Footer */
 footer {
-    background: #252044;
+    background: #201a39;
     color: white;
     text-align: center;
     padding: 20px;
 }
 
+/* Mobile Responsive */
 @media(max-width: 600px) {
-    nav a {
-        display: inline-block;
-        margin: 8px;
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .card, .certificate-card {
+        width: 100%;
+        max-width: 340px;
     }
 }
 </style>
@@ -144,138 +247,257 @@ footer {
 
 <!-- Navigation -->
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#contact">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#internships">Internships</a>
+<a href="#certificates">Certificates</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <!-- Home -->
-<header id="home">
+<header class="hero" id="home">
 
-    <img src="images/profile.jpg" alt="My Profile Photo">
+<img src="photo.jpeg"
+     alt="Professional Profile Photo"
+     class="profile-photo">
 
-    <h1>Hi, I'm Pavithra 👋</h1>
+<h1>Hi, I'm Pavithra</h1>
 
-    <p>Computer Science Engineering Student</p>
+<p>Computer Science Engineering Student</p>
 
-    <p>Aspiring Software Developer</p>
+<p>Aspiring Software Developer | Java Full Stack Enthusiast</p>
+
+<a href="#about" class="btn">Explore My Portfolio</a>
 
 </header>
 
 <!-- About -->
 <section id="about">
 
-    <h2>About Me</h2>
+<h2 class="section-title">About Me</h2>
 
-    <div class="about">
+<div class="about-box">
 
-        <p>
-            I am a third-year Computer Science and Engineering
-            student interested in programming and software
-            development.
-        </p>
+<p>
+Hello! I am Pavithra, a third-year Computer Science
+and Engineering student passionate about technology,
+programming and software development.
+</p>
 
-        <p>
-            I have knowledge of Java, Python, HTML, CSS,
-            JavaScript, React and SQL. I enjoy learning
-            new technologies and developing creative projects.
-        </p>
+<br>
 
-        <p>
-            My goal is to become a skilled software developer
-            and improve my technical knowledge.
-        </p>
+<p>
+I have knowledge of Java, Python, HTML, CSS,
+JavaScript, React and SQL. I enjoy learning new
+technologies and developing creative projects.
+</p>
 
-    </div>
+<br>
 
+<p>
+I am interested in Java Full Stack Development and
+aim to become a skilled software developer.
+I believe in continuous learning and improving
+my technical skills.
+</p>
+
+</div>
+</section>
+
+<!-- Education -->
+<section id="education">
+
+<h2 class="section-title">Education</h2>
+
+<div class="education-card">
+
+<h3>Bachelor of Technology (B.Tech)</h3>
+
+<p>Computer Science and Engineering</p>
+
+<p>Madanapalle Institute of Technology and Science</p>
+
+<p>CGPA: 8.37</p>
+
+<p>Expected Graduation: 2028</p>
+
+</div>
 </section>
 
 <!-- Skills -->
 <section id="skills">
 
-    <h2>My Skills</h2>
+<h2 class="section-title">Technical Skills</h2>
 
-    <div class="skills">
-        <span>Java</span>
-        <span>Python</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>React</span>
-        <span>SQL</span>
-    </div>
+<div class="skills">
 
+<span>Java</span>
+<span>Python</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>React</span>
+<span>SQL</span>
+<span>GitHub</span>
+
+</div>
 </section>
 
 <!-- Projects -->
 <section id="projects">
 
-    <h2>My Projects</h2>
+<h2 class="section-title">My Projects</h2>
 
-    <div class="project-card">
+<div class="card-container">
 
-        <h3>Online Food Ordering System</h3>
+<div class="card">
+<h3>Online Food Ordering System</h3>
+<p>
+A web-based project designed to make
+online food ordering easier and convenient.
+</p>
+</div>
 
-        <p>
-            A mini project developed to make food ordering
-            easier through an online platform.
-        </p>
+</div>
+</section>
 
-    </div>
+<!-- Internships -->
+<section id="internships">
 
+<h2 class="section-title">Internships</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>CodSoft</h3>
+<p>Web Development Internship</p>
+</div>
+
+<div class="card">
+<h3>EduSkills</h3>
+<p>Python Full Stack Developer</p>
+</div>
+
+<div class="card">
+<h3>Apex Planet</h3>
+<p>Web Development Internship</p>
+</div>
+
+</div>
 </section>
 
 <!-- Certificates -->
 <section id="certificates">
 
-    <h2>My Certificates</h2>
+<h2 class="section-title">My Certificates</h2>
 
-    <div class="certificates">
+<div class="certificate-container">
 
-        <div class="certificate-card">
-            <img src="My Image.jpeg"
-                 alt="AI Certificate">
-            <h3>AI Fundamentals</h3>
-            <p>AI Certification</p>
-        </div>
+<div class="certificate-card">
 
-        <div class="certificate-card">
-            <img src="certificates/certificate2.jpg"
-                 alt="Web Development Certificate">
-            <h3>Web Development</h3>
-            <p>CodSoft Internship</p>
-        </div>
+<img src="My Image.jpeg"
+     alt=" Certificate">
 
-        <div class="certificate-card">
-            <img src="certificates/certificate3.jpg"
-                 alt="Python Certificate">
-            <h3>Python Full Stack</h3>
-            <p>EduSkills Internship</p>
-        </div>
+<h3>AI Fundamentals</h3>
 
-    </div>
+<p>Accenture / FutureSkills Prime</p>
 
+<a href="certificates/certificate1.jpg"
+   target="_blank">View Certificate</a>
+
+</div>
+
+<div class="certificate-card">
+
+<img src="certificates/certificate2.jpg"
+     alt="Web Development Certificate">
+
+<h3>Web Development</h3>
+
+<p>CodSoft Internship</p>
+
+<a href="certificates/certificate2.jpg"
+   target="_blank">View Certificate</a>
+
+</div>
+
+<div class="certificate-card">
+
+<img src="certificates/certificate3.jpg"
+     alt="Python Full Stack Certificate">
+
+<h3>Python Full Stack</h3>
+
+<p>EduSkills</p>
+
+<a href="certificates/certificate3.jpg"
+   target="_blank">View Certificate</a>
+
+</div>
+
+<div class="certificate-card">
+
+<img src="certificates/certificate4.jpg"
+     alt="Introduction to AI Certificate">
+
+<h3>Introduction to AI</h3>
+
+<p>Simplilearn</p>
+
+<a href="certificates/certificate4.jpg"
+   target="_blank">View Certificate</a>
+
+</div>
+
+</div>
+</section>
+
+<!-- Achievements -->
+<section id="achievements">
+
+<h2 class="section-title">Achievements</h2>
+
+<div class="achievement-box">
+
+<p>★ HackerRank SQL – 5 Stars</p>
+<p>★ HackerRank Java – 3 Stars</p>
+<p>★ HackerRank Python – 2 Stars</p>
+<p>★ Participated in Ideathon 2K26</p>
+
+</div>
 </section>
 
 <!-- Contact -->
-<section id="contact" class="contact">
+<section id="contact">
 
-    <h2>Contact Me</h2>
+<h2 class="section-title">Contact Me</h2>
 
-    <p>Email: yourmail@gmail.com</p>
+<div class="contact-box">
 
-    <p>GitHub: github.com/yourusername</p>
+<p>Email: <a href="mailto:yourmail@gmail.com">
+yourmail@gmail.com</a></p>
 
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+<p>GitHub:
+<a href="https://github.com/yourusername">
+My GitHub Profile</a></p>
 
+<p>LinkedIn:
+<a href="https://www.linkedin.com/in/yourprofile">
+My LinkedIn Profile</a></p>
+
+</div>
 </section>
 
 <!-- Footer -->
 <footer>
-    <p>© 2026 Pavithra | My Portfolio</p>
+
+<p>© 2026 Pavithra | Personal Portfolio</p>
+
+<p>Designed with HTML and CSS</p>
+
 </footer>
 
 </body>
