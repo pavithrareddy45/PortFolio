@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pavithra | My Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5fa;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    background: #252044;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+/* Home */
+header {
+    background: linear-gradient(120deg, #6844c4, #a36bda);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+}
+
+header h1 {
+    margin: 15px;
+}
+
+/* Common Sections */
+section {
+    padding: 45px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #6844c4;
+    margin-bottom: 25px;
+}
+
+/* About */
+.about {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* Skills */
+.skills span {
+    display: inline-block;
+    background: #6844c4;
+    color: white;
+    padding: 10px 18px;
+    margin: 7px;
+    border-radius: 20px;
+}
+
+/* Projects */
+.project-card {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+/* Certificates */
+.certificates {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.certificate-card {
+    background: white;
+    width: 280px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.certificate-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+}
+
+.certificate-card h3 {
+    margin-top: 10px;
+    color: #6844c4;
+}
+
+/* Contact */
+.contact p {
+    margin: 12px;
+}
+
+/* Footer */
+footer {
+    background: #252044;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media(max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Home -->
+<header id="home">
+
+    <img src="images/profile.jpg" alt="My Profile Photo">
+
+    <h1>Hi, I'm Pavithra 👋</h1>
+
+    <p>Computer Science Engineering Student</p>
+
+    <p>Aspiring Software Developer</p>
+
+</header>
+
+<!-- About -->
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="about">
+
+        <p>
+            I am a third-year Computer Science and Engineering
+            student interested in programming and software
+            development.
+        </p>
+
+        <p>
+            I have knowledge of Java, Python, HTML, CSS,
+            JavaScript, React and SQL. I enjoy learning
+            new technologies and developing creative projects.
+        </p>
+
+        <p>
+            My goal is to become a skilled software developer
+            and improve my technical knowledge.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Skills -->
+<section id="skills">
+
+    <h2>My Skills</h2>
+
+    <div class="skills">
+        <span>Java</span>
+        <span>Python</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>SQL</span>
+    </div>
+
+</section>
+
+<!-- Projects -->
+<section id="projects">
+
+    <h2>My Projects</h2>
+
+    <div class="project-card">
+
+        <h3>Online Food Ordering System</h3>
+
+        <p>
+            A mini project developed to make food ordering
+            easier through an online platform.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Certificates -->
+<section id="certificates">
+
+    <h2>My Certificates</h2>
+
+    <div class="certificates">
+
+        <div class="certificate-card">
+            <img src="certificates/certificate1.jpg"
+                 alt="AI Certificate">
+            <h3>AI Fundamentals</h3>
+            <p>AI Certification</p>
+        </div>
+
+        <div class="certificate-card">
+            <img src="certificates/certificate2.jpg"
+                 alt="Web Development Certificate">
+            <h3>Web Development</h3>
+            <p>CodSoft Internship</p>
+        </div>
+
+        <div class="certificate-card">
+            <img src="certificates/certificate3.jpg"
+                 alt="Python Certificate">
+            <h3>Python Full Stack</h3>
+            <p>EduSkills Internship</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+
+    <h2>Contact Me</h2>
+
+    <p>Email: yourmail@gmail.com</p>
+
+    <p>GitHub: github.com/yourusername</p>
+
+    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Pavithra | My Portfolio</p>
+</footer>
+
+</body>
+</html>
